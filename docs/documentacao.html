@@ -6,37 +6,55 @@
   <title>Documentação - Metacognição em Leitura</title>
 
   <link rel="icon" href="assets/stack-of-books.png" type="image/png" />
-
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <style>
+    /* Evita que o body role quando o menu móvel está aberto */
+    body.menu-open {
+      overflow: hidden;
+    }
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans leading-relaxed min-h-screen flex flex-col">
 
   <!-- Cabeçalho -->
-  <header class="bg-purple-900 text-white p-4 shadow-md flex-shrink-0">
-    <div class="container mx-auto flex justify-between items-center">
+  <header class="bg-purple-900 text-white p-4 shadow-md flex justify-between items-center">
+    <div class="flex items-center gap-2">
       <h1 class="text-2xl font-bold flex items-center gap-2">
         Metacognição em Ação
         <img src="assets/stack-of-books.png" alt="Ícone de livros" class="w-10 h-10" />
       </h1>
     </div>
+
+    <!-- Botão hamburger para menu móvel -->
+    <button id="menu-btn" aria-label="Abrir menu" class="md:hidden focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </button>
   </header>
 
-  <!-- Conteúdo com menu lateral e área principal -->
-  <div class="flex flex-grow container mx-auto px-6 py-8 max-w-6xl gap-8">
+  <div class="flex flex-grow container mx-auto px-4 md:px-6 py-8 max-w-6xl gap-8">
 
-    <!-- Menu lateral -->
-    <nav class="w-64 bg-white rounded-lg shadow p-6 flex-shrink-0 sticky top-20 h-[calc(100vh-5rem)] overflow-auto" aria-label="Menu da documentação">
+    <!-- Menu lateral para md+ -->
+    <nav id="sidebar" 
+      class="fixed inset-y-0 left-0 bg-white rounded-r-lg shadow p-6 w-64 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out overflow-auto
+             z-30 md:static md:flex-shrink-0 h-[calc(100vh-5rem)]"
+      aria-label="Menu da documentação"
+    >
       <h2 class="text-xl font-semibold mb-6 text-purple-900">Seções</h2>
       <ul class="space-y-4 text-gray-800">
         <li>
-          <a href="#introducao" class="block hover:text-purple-700 transition font-medium">Introdução</a>
+          <a href="#introducao" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Introdução</a>
         </li>
         <li>
-          <a href="#features" class="block hover:text-purple-700 transition font-medium">Features</a>
+          <a href="#features" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Features</a>
         </li>
         <!-- Adicione outros links aqui -->
       </ul>
     </nav>
+
+    <!-- Fundo escuro atrás do menu móvel quando aberto -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-20 md:hidden"></div>
 
     <!-- Conteúdo principal -->
     <main class="flex-grow bg-white rounded-lg shadow p-6 overflow-auto max-h-[calc(100vh-5rem)]">
@@ -75,6 +93,28 @@
   <footer class="bg-gray-900 text-white p-6 text-center text-sm flex-shrink-0">
     <p>&copy; 2025 Metacognição em Leitura. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+      overlay.classList.toggle('hidden');
+      document.body.classList.toggle('menu-open');
+    });
+
+    overlay.addEventListener('click', () => {
+      closeMenu();
+    });
+
+    function closeMenu() {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+      document.body.classList.remove('menu-open');
+    }
+  </script>
 
 </body>
 </html>
