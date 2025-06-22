@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Documentação - Metacognição em Leitura</title>
+  <title>Estudante</title>
 
   <link rel="icon" href="assets/stack-of-books.png" type="image/png" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
@@ -63,8 +63,8 @@
               <a href="professor.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Professor</a>
             </li>
             <li>
-              <a href="usuario.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Usuário</a>
-            </li>
+            <a href="usuario.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Usuário</a>
+        </li>
           </ul>
         </li>
         <li>
@@ -79,30 +79,36 @@
     <!-- Conteúdo principal -->
     <main class="flex-grow bg-white rounded-lg shadow p-6 overflow-auto max-h-[calc(100vh-5rem)]">
       <h2 class="text-3xl font-extrabold text-purple-900 mb-8 text-center">
-        Documentação
+        Tela do Estudante
       </h2>
 
-      <section id="introducao" class="mb-8">
-        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Introdução</h3>
-        <ul class="list-disc pl-6 space-y-2 text-gray-800">
-          <li><strong>Passo 1:</strong> Clone o repositório: <code class="bg-gray-200 px-1 py-0.5 rounded text-sm text-purple-900">git clone https://github.com/henriqueodaguiri/PEC-Metacom</code></li>
-          <li><strong>Passo 2:</strong> Instale as dependências: <code class="bg-gray-200 px-1 py-0.5 rounded text-sm text-purple-900">npm install</code></li>
-          <li><strong>Passo 3:</strong> Execute a aplicação: <code class="bg-gray-200 px-1 py-0.5 rounded text-sm text-purple-900">npm start</code></li>
-        </ul>
+      <section id="descricao-login" class="mb-8 flex flex-col items-center gap-6">
+        <p class="text-gray-800 text-justify max-w-3xl">
+          Ao acessar a página, o sistema realiza automaticamente uma consulta para verificar se o usuário possui leituras pendentes, ou seja, textos que ainda não foram concluídos. Essa verificação é importante para manter o usuário informado sobre o seu progresso e as atividades que ainda precisam ser realizadas. Caso existam textos não finalizados, eles são listados de forma organizada, facilitando a visualização e o acesso direto a cada um desses conteúdos. Isso ajuda o usuário a retomar exatamente de onde parou, promovendo um fluxo contínuo de aprendizado e engajamento.
+        </p>
+        <p class="text-gray-800 text-justify max-w-3xl">
+          Por outro lado, se não houver nenhuma leitura pendente, o sistema exibe uma mensagem de incentivo, motivando o usuário a continuar aperfeiçoando suas habilidades de leitura. Essa mensagem atua como um reforço positivo, criando uma sensação de conquista e progresso, o que pode aumentar a motivação para buscar novos desafios e manter uma rotina de estudos ativa. Dessa forma, a interface se adapta ao estado do usuário, oferecendo uma experiência personalizada e encorajadora, que contribui para um desenvolvimento constante e autônomo.
+        </p>
       </section>
 
-      <section id="features">
-        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Features</h3>
-        <ul class="list-disc pl-6 space-y-2 text-gray-800">
-          <li>Aprimoramento de dedução e indução em leitura.</li>
-          <li>Exercícios interativos para desenvolver raciocínio lógico.</li>
-          <li>Feedback instantâneo para aprimorar o pensamento crítico.</li>
-        </ul>
+       <!-- Exemplo do código -->
+      <section id="exemplo-codigo" class="mb-8 flex flex-col items-center gap-6">
+        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Exemplo do código</h3>
+      </section>
+
+      <section id="exemplo-codigo-2" class="mb-8 flex flex-col items-center gap-6">
+        <p class="text-gray-800 text-justify max-w-3xl">
+          Esse trecho verifica se há textos pendentes, ou seja, se a lista undoneTexts existe e tem itens. Caso positivo, exibe um título e a lista dos textos, utilizando um componente para cada item. Se a lista estiver vazia, exibe uma mensagem motivacional com uma logo, incentivando o usuário a melhorar a leitura.
+        </p>
+        <p class="text-gray-800 text-justify max-w-3xl">
+          Essa lógica é fundamental para criar uma experiência dinâmica, onde a interface se adapta de acordo com os dados disponíveis, mostrando informações úteis ou uma mensagem alternativa.
+        </p>
+         <img src="assets/estudante.png" alt="Exemplo do código handleLogin" class="max-w-full h-auto rounded-lg shadow-md" />
       </section>
 
       <div class="mt-12 text-center">
-        <a href="index.html" class="inline-block bg-purple-800 text-white px-6 py-3 rounded-lg shadow hover:bg-purple-700 transition">
-          ← Voltar à Página Inicial
+        <a href="documentacao.html" class="inline-block bg-purple-800 text-white px-6 py-3 rounded-lg shadow hover:bg-purple-700 transition">
+          ← Voltar à Página Anterior
         </a>
       </div>
     </main>

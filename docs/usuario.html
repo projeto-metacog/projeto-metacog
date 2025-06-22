@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Documentação - Metacognição em Leitura</title>
+  <title>Usuário</title>
 
   <link rel="icon" href="assets/stack-of-books.png" type="image/png" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
@@ -20,7 +20,7 @@
   <!-- Cabeçalho -->
   <header class="bg-purple-900 text-white p-4 shadow-md flex justify-between items-center">
     <div class="flex items-center gap-2">
-      <a href="index.html" class="text-2xl font-bold flex items-center gap-2">
+     <a href="index.html" class="text-2xl font-bold flex items-center gap-2">
         Metacognição em Ação
         <img src="assets/stack-of-books.png" alt="Ícone de livros" class="w-10 h-10" />
       </a>
@@ -79,30 +79,41 @@
     <!-- Conteúdo principal -->
     <main class="flex-grow bg-white rounded-lg shadow p-6 overflow-auto max-h-[calc(100vh-5rem)]">
       <h2 class="text-3xl font-extrabold text-purple-900 mb-8 text-center">
-        Documentação
+        Tela do Usuário
       </h2>
 
-      <section id="introducao" class="mb-8">
-        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Introdução</h3>
-        <ul class="list-disc pl-6 space-y-2 text-gray-800">
-          <li><strong>Passo 1:</strong> Clone o repositório: <code class="bg-gray-200 px-1 py-0.5 rounded text-sm text-purple-900">git clone https://github.com/henriqueodaguiri/PEC-Metacom</code></li>
-          <li><strong>Passo 2:</strong> Instale as dependências: <code class="bg-gray-200 px-1 py-0.5 rounded text-sm text-purple-900">npm install</code></li>
-          <li><strong>Passo 3:</strong> Execute a aplicação: <code class="bg-gray-200 px-1 py-0.5 rounded text-sm text-purple-900">npm start</code></li>
-        </ul>
+      <section id="descricao-login" class="mb-8 flex flex-col items-center gap-6">
+        <p class="text-gray-800 text-justify max-w-3xl">
+          O código é projetado para fornecer uma interface intuitiva para que o usuário personalize suas informações pessoais de maneira segura e eficiente. Ele começa carregando os dados existentes do usuário, como nome, e-mail e avatar, garantindo que o formulário esteja preenchido com as informações atuais. Isso facilita a edição sem a necessidade de reentrada completa dos dados.
+        </p>
+        <p class="text-gray-800 text-justify max-w-3xl">
+          A funcionalidade de troca de avatar permite que o usuário selecione uma nova imagem e visualize instantaneamente como ela será exibida antes de confirmar a alteração. Isso é implementado por meio de um preview gerado localmente usando o método URL.createObjectURL. Quando a alteração é confirmada, a nova imagem é enviada para o servidor através de uma API, e o link gerado é associado à conta do usuário.
+        </p>
+        <p class="text-gray-800 text-justify max-w-3xl">
+          Além disso, o código verifica se as alterações de senha estão completas e consistentes, exigindo que o usuário informe a senha antiga e a confirmação da nova senha. Caso essas condições não sejam atendidas, mensagens claras explicam o problema, ajudando o usuário a corrigir os erros.
+        </p>
+        <p class="text-gray-800 text-justify max-w-3xl">
+          Durante o processo de atualização, o código exibe uma interface de carregamento para indicar que o sistema está processando as mudanças. Isso melhora a experiência do usuário ao evitar incertezas sobre o progresso da operação. Após a conclusão bem-sucedida, as novas informações são armazenadas localmente no navegador, atualizando os dados em tempo real sem a necessidade de recarregar a página. Mensagens de sucesso ou erro são exibidas por meio de notificações, fornecendo feedback imediato ao usuário.
+        </p>
       </section>
 
-      <section id="features">
-        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Features</h3>
-        <ul class="list-disc pl-6 space-y-2 text-gray-800">
-          <li>Aprimoramento de dedução e indução em leitura.</li>
-          <li>Exercícios interativos para desenvolver raciocínio lógico.</li>
-          <li>Feedback instantâneo para aprimorar o pensamento crítico.</li>
-        </ul>
+      <section id="exemplo-codigo" class="mb-8 flex flex-col items-center gap-6">
+        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Exemplo do código</h3>
+      </section>
+
+      <section id="exemplo-codigo-2" class="mb-8 flex flex-col items-center gap-6">
+        <p class="text-gray-800 text-justify max-w-3xl">
+          Um trecho importante do código é a função que lida com a atualização dos dados do usuário quando ele clica em "Salvar". Essa função começa validando as informações inseridas: verifica se o nome e o e-mail foram preenchidos e confere se os campos relacionados à troca de senha foram usados corretamente, exigindo que a senha antiga seja informada junto com a nova e sua confirmação. Se alguma dessas validações falhar, uma mensagem de erro é exibida, interrompendo o processo.
+        </p>
+        <p class="text-gray-800 text-justify max-w-3xl">
+          Caso as informações estejam corretas, a função inicia o processo de atualização, enviando os dados para o servidor via uma requisição à API. Se o usuário selecionou uma nova imagem para o avatar, o arquivo é enviado separadamente e o link da imagem atualizada é recebido e associado ao perfil. Depois que todas as alterações são confirmadas, os dados locais do usuário são atualizados para refletir as mudanças imediatamente, garantindo que a interface fique sincronizada. Além disso, notificações aparecem para informar o sucesso ou falha da operação, melhorando a comunicação com o usuário.
+        </p>
+        <img src="assets/usuario.png" alt="Exemplo do código handleLogin" class="max-w-full h-auto rounded-lg shadow-md" />
       </section>
 
       <div class="mt-12 text-center">
-        <a href="index.html" class="inline-block bg-purple-800 text-white px-6 py-3 rounded-lg shadow hover:bg-purple-700 transition">
-          ← Voltar à Página Inicial
+        <a href="documentacao.html" class="inline-block bg-purple-800 text-white px-6 py-3 rounded-lg shadow hover:bg-purple-700 transition">
+          ← Voltar à Página Anterior
         </a>
       </div>
     </main>

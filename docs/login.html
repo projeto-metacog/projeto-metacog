@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Documentação - Metacognição em Leitura</title>
+  <title>Login</title>
 
   <link rel="icon" href="assets/stack-of-books.png" type="image/png" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
@@ -79,30 +79,36 @@
     <!-- Conteúdo principal -->
     <main class="flex-grow bg-white rounded-lg shadow p-6 overflow-auto max-h-[calc(100vh-5rem)]">
       <h2 class="text-3xl font-extrabold text-purple-900 mb-8 text-center">
-        Documentação
+        Tela de Login
       </h2>
 
-      <section id="introducao" class="mb-8">
-        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Introdução</h3>
-        <ul class="list-disc pl-6 space-y-2 text-gray-800">
-          <li><strong>Passo 1:</strong> Clone o repositório: <code class="bg-gray-200 px-1 py-0.5 rounded text-sm text-purple-900">git clone https://github.com/henriqueodaguiri/PEC-Metacom</code></li>
-          <li><strong>Passo 2:</strong> Instale as dependências: <code class="bg-gray-200 px-1 py-0.5 rounded text-sm text-purple-900">npm install</code></li>
-          <li><strong>Passo 3:</strong> Execute a aplicação: <code class="bg-gray-200 px-1 py-0.5 rounded text-sm text-purple-900">npm start</code></li>
-        </ul>
+      <section id="descricao-login" class="mb-8 flex flex-col items-center gap-6">
+        <p class="text-gray-800 text-justify max-w-3xl">
+          O código implementa uma interface de login utilizando React e Next.js, combinando funcionalidade, design responsivo e acessibilidade. Ele apresenta dois campos de entrada: um para e-mail, com o ícone de um envelope fornecido pela biblioteca react-icons, e outro para senha, com um ícone de cadeado, o que melhora a experiência do usuário, tornando os campos mais intuitivos.
+        </p>
+        <p class="text-gray-800 text-justify max-w-3xl">
+          A autenticação é gerenciada por meio do contexto de autenticação useAuth, que fornece a função login. Quando o usuário insere suas credenciais e clica no botão "Entrar", a função handleLogin é acionada, validando os dados e redirecionando o usuário para a página principal se o login for bem-sucedido.
+        </p>
+        <p class="text-gray-800 text-justify max-w-3xl">
+          Uma funcionalidade adicional é o suporte ao teclado: ao pressionar a tecla "Enter", a autenticação é automaticamente realizada, simplificando o processo para o usuário. Essa interação é gerenciada pelo hook useEffect, que adiciona e remove dinamicamente um listener de eventos para capturar a tecla.
+        </p>
+        <p class="text-gray-800 text-justify max-w-3xl">
+          A página também inclui um link para a criação de uma nova conta, permitindo aos usuários que ainda não possuem cadastro navegar facilmente para a página correspondente. Visualmente, a interface é composta por um plano de fundo com uma imagem otimizada pela ferramenta de imagens do Next.js e componentes estilizados que garantem um layout limpo e responsivo.
+        </p>
       </section>
 
-      <section id="features">
-        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Features</h3>
-        <ul class="list-disc pl-6 space-y-2 text-gray-800">
-          <li>Aprimoramento de dedução e indução em leitura.</li>
-          <li>Exercícios interativos para desenvolver raciocínio lógico.</li>
-          <li>Feedback instantâneo para aprimorar o pensamento crítico.</li>
-        </ul>
+      <!-- Exemplo do código -->
+      <section id="exemplo-codigo" class="mb-8 flex flex-col items-center gap-6">
+        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Exemplo do código</h3>
+        <p class="text-gray-800 text-justify max-w-3xl">
+          O componente de login utiliza useState para gerenciar os estados de e-mail e senha, capturando as entradas do usuário. A função handleLogin autentica o usuário através do contexto de autenticação e redireciona para a página inicial em caso de sucesso. Com o useEffect, é implementado um evento que permite submeter o formulário ao pressionar a tecla Enter, melhorando a experiência do usuário. A integração entre estados controlados, eventos e autenticação torna o componente funcional, intuitivo e eficiente.
+        </p>
+        <img src="assets/login.png" alt="Exemplo do código handleLogin" class="max-w-full h-auto rounded-lg shadow-md" />
       </section>
 
       <div class="mt-12 text-center">
-        <a href="index.html" class="inline-block bg-purple-800 text-white px-6 py-3 rounded-lg shadow hover:bg-purple-700 transition">
-          ← Voltar à Página Inicial
+        <a href="documentacao.html" class="inline-block bg-purple-800 text-white px-6 py-3 rounded-lg shadow hover:bg-purple-700 transition">
+          ← Voltar à Página Anterior
         </a>
       </div>
     </main>

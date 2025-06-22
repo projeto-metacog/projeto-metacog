@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Documentação - Metacognição em Leitura</title>
+  <title>Professor</title>
 
   <link rel="icon" href="assets/stack-of-books.png" type="image/png" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
@@ -79,30 +79,44 @@
     <!-- Conteúdo principal -->
     <main class="flex-grow bg-white rounded-lg shadow p-6 overflow-auto max-h-[calc(100vh-5rem)]">
       <h2 class="text-3xl font-extrabold text-purple-900 mb-8 text-center">
-        Documentação
+        Tela do Professor
       </h2>
 
-      <section id="introducao" class="mb-8">
-        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Introdução</h3>
-        <ul class="list-disc pl-6 space-y-2 text-gray-800">
-          <li><strong>Passo 1:</strong> Clone o repositório: <code class="bg-gray-200 px-1 py-0.5 rounded text-sm text-purple-900">git clone https://github.com/henriqueodaguiri/PEC-Metacom</code></li>
-          <li><strong>Passo 2:</strong> Instale as dependências: <code class="bg-gray-200 px-1 py-0.5 rounded text-sm text-purple-900">npm install</code></li>
-          <li><strong>Passo 3:</strong> Execute a aplicação: <code class="bg-gray-200 px-1 py-0.5 rounded text-sm text-purple-900">npm start</code></li>
-        </ul>
+      <section id="descricao-login" class="mb-8 flex flex-col items-center gap-6">
+        <p class="text-gray-800 text-justify max-w-3xl">
+          A página Teacher atua como uma interface inicial para professores, com um design minimalista e objetivo. Ela é composta por um cabeçalho e uma área de destaque onde um logotipo e uma mensagem motivacional são exibidos. O foco dessa página está em proporcionar uma visão clara e direta do propósito principal: gerenciar turmas e leituras. Essa simplicidade permite que os professores compreendam rapidamente o contexto da aplicação.
+        </p>
+        <p class="text-gray-800 text-justify max-w-3xl">
+          Já a página ClassDashboard é mais funcional e interativa, projetada para que os professores tenham controle sobre suas turmas. Nessa página, uma barra de busca permite filtrar turmas pelo nome, tornando a interface útil em cenários com grande quantidade de informações. Cada turma é representada por um cartão que fornece acesso direto às suas informações e funcionalidades, como visualização ou edição. Além disso, existe a possibilidade de criar novas turmas de forma rápida através de um botão dedicado.
+        </p>
+        <p class="text-gray-800 text-justify max-w-3xl">
+          Um ponto interessante na ClassDashboard é o uso de mensagens de feedback. Ao realizar ações em outras partes do sistema (como criar ou editar turmas), o sistema armazena mensagens temporárias que são exibidas ao professor ao retornar para essa página. Isso melhora a experiência do usuário ao garantir que suas ações foram concluídas com sucesso.
+        </p>
+        <p class="text-gray-800 text-justify max-w-3xl">
+          Além disso, a página utiliza atualizações dinâmicas para carregar os dados das turmas, fazendo requisições a uma API e garantindo que as informações exibidas estejam sempre atualizadas. Essa abordagem é complementada por componentes reutilizáveis, como o Input para a barra de busca e o ClassCard para representar cada turma, garantindo uma interface consistente e modular.
+        </p>
       </section>
 
-      <section id="features">
-        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Features</h3>
-        <ul class="list-disc pl-6 space-y-2 text-gray-800">
-          <li>Aprimoramento de dedução e indução em leitura.</li>
-          <li>Exercícios interativos para desenvolver raciocínio lógico.</li>
-          <li>Feedback instantâneo para aprimorar o pensamento crítico.</li>
-        </ul>
+        <section id="exemplo-codigo" class="mb-8 flex flex-col items-center gap-6">
+        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Exemplo do código</h3>
+      </section>
+
+      <section id="exemplo-codigo-2" class="mb-8 flex flex-col items-center gap-6">
+        <p class="text-gray-800 text-justify max-w-3xl">
+          Uma parte interessante do código é o manuseio da barra de busca, que está diretamente ligada à funcionalidade de pesquisa por turmas na página ClassDashboard. Essa funcionalidade utiliza o estado local search para armazenar o texto digitado pelo usuário. Sempre que o conteúdo do campo de busca é alterado, a função associada ao evento onChange atualiza esse estado com o valor atual.
+        </p>
+        <p class="text-gray-800 text-justify max-w-3xl">
+          Em conjunto, o uso do estado search ativa o gancho useEffect. Esse gancho é configurado para ser executado toda vez que o valor de search muda. Dentro dele, uma requisição à API é feita, passando o nome da turma digitado pelo usuário como parâmetro (/classes?name=${search}). A resposta dessa requisição atualiza o estado classes, que armazena os dados das turmas correspondentes ao termo de busca.
+        </p>
+        <p class="text-gray-800 text-justify max-w-3xl">
+          Com isso, a interface reage automaticamente às alterações no campo de busca. Se o campo estiver vazio, um botão especial é exibido para adicionar uma nova turma. Quando o usuário digita algo, apenas as turmas que correspondem ao critério de busca são exibidas.
+        </p>
+         <img src="assets/professor.png" alt="Exemplo do código handleLogin" class="max-w-full h-auto rounded-lg shadow-md" />
       </section>
 
       <div class="mt-12 text-center">
-        <a href="index.html" class="inline-block bg-purple-800 text-white px-6 py-3 rounded-lg shadow hover:bg-purple-700 transition">
-          ← Voltar à Página Inicial
+        <a href="documentacao.html" class="inline-block bg-purple-800 text-white px-6 py-3 rounded-lg shadow hover:bg-purple-700 transition">
+          ← Voltar à Página Anterior
         </a>
       </div>
     </main>

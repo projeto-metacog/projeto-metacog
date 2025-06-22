@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Documentação - Metacognição em Leitura</title>
+  <title>Tecnologia</title>
 
   <link rel="icon" href="assets/stack-of-books.png" type="image/png" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 
   <style>
-    /* Evita que o body role quando o menu móvel está aberto */
     body.menu-open {
       overflow: hidden;
     }
@@ -20,7 +19,7 @@
   <!-- Cabeçalho -->
   <header class="bg-purple-900 text-white p-4 shadow-md flex justify-between items-center">
     <div class="flex items-center gap-2">
-      <a href="index.html" class="text-2xl font-bold flex items-center gap-2">
+     <a href="index.html" class="text-2xl font-bold flex items-center gap-2">
         Metacognição em Ação
         <img src="assets/stack-of-books.png" alt="Ícone de livros" class="w-10 h-10" />
       </a>
@@ -62,7 +61,7 @@
              <li>
               <a href="professor.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Professor</a>
             </li>
-            <li>
+             <li>
               <a href="usuario.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Usuário</a>
             </li>
           </ul>
@@ -79,30 +78,40 @@
     <!-- Conteúdo principal -->
     <main class="flex-grow bg-white rounded-lg shadow p-6 overflow-auto max-h-[calc(100vh-5rem)]">
       <h2 class="text-3xl font-extrabold text-purple-900 mb-8 text-center">
-        Documentação
+        Tecnologias Utilizadas
       </h2>
 
-      <section id="introducao" class="mb-8">
-        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Introdução</h3>
-        <ul class="list-disc pl-6 space-y-2 text-gray-800">
-          <li><strong>Passo 1:</strong> Clone o repositório: <code class="bg-gray-200 px-1 py-0.5 rounded text-sm text-purple-900">git clone https://github.com/henriqueodaguiri/PEC-Metacom</code></li>
-          <li><strong>Passo 2:</strong> Instale as dependências: <code class="bg-gray-200 px-1 py-0.5 rounded text-sm text-purple-900">npm install</code></li>
-          <li><strong>Passo 3:</strong> Execute a aplicação: <code class="bg-gray-200 px-1 py-0.5 rounded text-sm text-purple-900">npm start</code></li>
-        </ul>
+      <section id="frontend" class="mb-12">
+        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Front-End</h3>
+        <p class="text-gray-700 text-base">
+          O front-end da aplicação é construído utilizando <strong>React</strong>, uma biblioteca JavaScript para interfaces de usuário, em conjunto com o framework <strong>Next.js</strong>, que traz funcionalidades como renderização no lado do servidor e geração de páginas estáticas. Para a estilização, utiliza-se <strong>Styled Components</strong>, permitindo a escrita de CSS diretamente dentro dos componentes.
+        </p>
       </section>
 
-      <section id="features">
-        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Features</h3>
-        <ul class="list-disc pl-6 space-y-2 text-gray-800">
-          <li>Aprimoramento de dedução e indução em leitura.</li>
-          <li>Exercícios interativos para desenvolver raciocínio lógico.</li>
-          <li>Feedback instantâneo para aprimorar o pensamento crítico.</li>
-        </ul>
+      <section id="backend" class="mb-12">
+        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Back-End</h3>
+        <p class="text-gray-700 text-base">
+          A lógica do back-end é provisionada pelo próprio <strong>Next.js</strong>, que oferece suporte a APIs do lado do servidor. Com isso, é possível implementar a comunicação entre o cliente e o servidor de forma eficiente e integrada.
+        </p>
+      </section>
+
+      <section id="bancodados" class="mb-12">
+        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Banco de Dados</h3>
+        <p class="text-gray-700 text-base">
+          A aplicação utiliza o <strong>PostgreSQL</strong> como banco de dados relacional. Para facilitar a interação com o banco de dados, é empregado o ORM <strong>Prisma</strong>, que permite criar e executar consultas complexas de forma simples e intuitiva.
+        </p>
+      </section>
+
+      <section id="docker">
+        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Infraestrutura</h3>
+        <p class="text-gray-700 text-base">
+          O <strong>Docker</strong> é usado para conteinerizar a aplicação, garantindo consistência entre os ambientes de desenvolvimento e produção. Isso facilita o gerenciamento do ambiente e a instalação de dependências.
+        </p>
       </section>
 
       <div class="mt-12 text-center">
-        <a href="index.html" class="inline-block bg-purple-800 text-white px-6 py-3 rounded-lg shadow hover:bg-purple-700 transition">
-          ← Voltar à Página Inicial
+        <a href="documentacao.html" class="inline-block bg-purple-800 text-white px-6 py-3 rounded-lg shadow hover:bg-purple-700 transition">
+          ← Voltar à Página Anterior
         </a>
       </div>
     </main>
