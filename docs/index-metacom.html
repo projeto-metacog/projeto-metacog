@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Metacognição em Leitura</title>
+
+  <link rel="icon" href="assets/stack-of-books.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 leading-relaxed min-h-screen flex flex-col">
+
+  <!-- Cabeçalho -->
+  <header class="p-4 shadow-md bg-[#1c6e8c]" style="background-color: #1c6e8c;">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold flex items-center gap-2 text-white">
+        Metacognição em Ação
+        <img src="assets/stack-of-books.png" alt="Ícone de livros" class="w-10 h-10" />
+      </h1>
+
+      <!-- Botão hambúrguer (visível apenas em telas pequenas) -->
+      <button id="menu-button" class="sm:hidden text-white focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Menu (desktop) -->
+      <nav class="hidden sm:flex space-x-8 text-lg font-semibold text-white">
+        <a href="sobre.html" class="hover:underline">Sobre o projeto</a>
+        <a href="documentacao.html" class="hover:underline">Documentação</a>
+      </nav>
+    </div>
+
+    <!-- Menu (mobile) -->
+    <div id="mobile-menu" class="sm:hidden hidden flex-col bg-[#1c6e8c] mt-4 px-4 pb-4 text-white text-lg font-semibold">
+      <a href="sobre.html" class="block py-2 border-b border-white/20">Sobre o projeto</a>
+      <a href="documentacao.html" class="block py-2">Documentação</a>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container mx-auto px-4 sm:px-6 py-12 sm:py-16 text-center flex-grow">
+    <div class="max-w-3xl mx-auto bg-white border border-gray-300 rounded-lg shadow-lg p-6 sm:p-8">
+      <h5 class="text-xl sm:text-2xl font-extrabold mb-8 sm:mb-10" style="color: #1c6e8c;">
+        Metacognição em Ação: Explorando o Mundo da Leitura
+      </h5> 
+
+      <p class="text-base sm:text-lg text-gray-700 text-justify mb-8">
+        O projeto <strong>Metacognição em Leitura</strong> promove o desenvolvimento de habilidades como planejamento, monitoramento e avaliação da compreensão textual, especialmente para estudantes do ensino fundamental. A iniciativa visa estimular leitores mais conscientes, capazes de refletir sobre o próprio processo de leitura e aplicar estratégias que favoreçam uma aprendizagem mais significativa.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+        <a href="index-metacom.html" 
+           class="text-white px-6 py-3 rounded-lg shadow w-full sm:w-48 inline-block text-center transition" 
+           style="background-color: #1c6e8c;"
+           onmouseover="this.style.backgroundColor='#246f93'" 
+           onmouseout="this.style.backgroundColor='#1c6e8c'">
+          📚 Metacognição em Leitura
+        </a>
+        <a href="./ppe/index.html" 
+           class="text-white px-6 py-3 rounded-lg shadow w-full sm:w-48 inline-block text-center transition" 
+           style="background-color: #1c6e8c;"
+           onmouseover="this.style.backgroundColor='#246f93'" 
+           onmouseout="this.style.backgroundColor='#1c6e8c'">
+          💻 Metacognição para Docentes
+        </a> 
+      </div>
+    </div>
+  </main>
+  
+  <!-- Rodapé -->
+  <footer class="p-6 text-center text-sm text-white bg-[#1c6e8c]">
+    <p>&copy; 2025 Metacognição em Ação. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Script do menu hambúrguer -->
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

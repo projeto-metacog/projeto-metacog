@@ -16,14 +16,25 @@
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans leading-relaxed min-h-screen flex flex-col">
 
-  <!-- Cabeçalho -->
-  <header class="bg-purple-900 text-white p-4 shadow-md flex justify-between items-center">
-    <div class="flex items-center gap-2">
-     <a href="index.html" class="text-2xl font-bold flex items-center gap-2">
+   <!-- Cabeçalho -->
+  <header class="p-4 shadow-md" style="background-color: #1c6e8c;">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index-metacom.html" class="text-2xl font-bold flex items-center gap-2 text-white">
         Metacognição em Ação
         <img src="assets/stack-of-books.png" alt="Ícone de livros" class="w-10 h-10" />
       </a>
+      <nav>
+      <ul class="flex space-x-8 text-lg font-semibold text-white">
+        <li>
+          <a href="sobre.html" class="hover:underline">Sobre o projeto</a>
+        </li>
+        <li>
+          <a href="documentacao.html" class="hover:underline">Documentação</a>
+        </li>
+      </ul>
+    </nav>
     </div>
+  </header>
 
     <!-- Botão hamburger para menu móvel -->
     <button id="menu-btn" aria-label="Abrir menu" class="md:hidden focus:outline-none">
@@ -34,41 +45,26 @@
 
   <div class="flex flex-grow container mx-auto px-4 md:px-6 py-8 max-w-6xl gap-8">
 
-    <!-- Menu lateral para md+ -->
+    <!-- Menu lateral -->
     <nav id="sidebar" 
       class="fixed inset-y-0 left-0 bg-white rounded-r-lg shadow p-6 w-64 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out overflow-auto
              z-30 md:static md:flex-shrink-0 h-[calc(100vh-5rem)]"
       aria-label="Menu da documentação"
     >
-      <h2 class="text-xl font-semibold mb-6 text-purple-900">Seções</h2>
+      <h2 class="text-xl font-semibold mb-6" style="color: #1c6e8c;">Seções</h2>
       <ul class="space-y-4 text-gray-800">
-        <li>
-          <a href="tecnologia.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Tecnologias utilizadas</a>
-        </li>
+        <li><a href="tecnologia.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Tecnologias utilizadas</a></li>
         <li>
           <p class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Features</p>
-          <!-- Submenu -->
           <ul class="pl-6 mt-2 space-y-2">
-            <li>
-              <a href="cadastro.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Cadastro</a>
-            </li>
-            <li>
-              <a href="login.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Login</a>
-            </li>
-             <li>
-              <a href="estudante.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Estudante</a>
-            </li>
-             <li>
-              <a href="professor.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Professor</a>
-            </li>
-             <li>
-              <a href="usuario.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Usuário</a>
-            </li>
+            <li><a href="cadastro.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Cadastro</a></li>
+            <li><a href="login.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Login</a></li>
+            <li><a href="estudante.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Estudante</a></li>
+            <li><a href="professor.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Professor</a></li>
+            <li><a href="usuario.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Usuário</a></li>
           </ul>
         </li>
-        <li>
-          <a href="banco.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Banco de dados</a>
-        </li>
+        <li><a href="banco.html" class="block hover:text-purple-700 transition font-medium" onclick="closeMenu()">Banco de dados</a></li>
       </ul>
     </nav>
 
@@ -77,40 +73,40 @@
 
     <!-- Conteúdo principal -->
     <main class="flex-grow bg-white rounded-lg shadow p-6 overflow-auto max-h-[calc(100vh-5rem)]">
-      <h2 class="text-3xl font-extrabold text-purple-900 mb-8 text-center">
+      <h2 class="text-3xl font-extrabold mb-8 text-center" style="color: #1c6e8c;">
         Tecnologias Utilizadas
       </h2>
 
       <section id="frontend" class="mb-12">
-        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Front-End</h3>
+        <h3 class="text-2xl font-semibold mb-4" style="color: #1c6e8c;">Front-End</h3>
         <p class="text-gray-700 text-base">
           O front-end da aplicação é construído utilizando <strong>React</strong>, uma biblioteca JavaScript para interfaces de usuário, em conjunto com o framework <strong>Next.js</strong>, que traz funcionalidades como renderização no lado do servidor e geração de páginas estáticas. Para a estilização, utiliza-se <strong>Styled Components</strong>, permitindo a escrita de CSS diretamente dentro dos componentes.
         </p>
       </section>
 
       <section id="backend" class="mb-12">
-        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Back-End</h3>
+        <h3 class="text-2xl font-semibold mb-4" style="color: #1c6e8c;">Back-End</h3>
         <p class="text-gray-700 text-base">
           A lógica do back-end é provisionada pelo próprio <strong>Next.js</strong>, que oferece suporte a APIs do lado do servidor. Com isso, é possível implementar a comunicação entre o cliente e o servidor de forma eficiente e integrada.
         </p>
       </section>
 
       <section id="bancodados" class="mb-12">
-        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Banco de Dados</h3>
+        <h3 class="text-2xl font-semibold mb-4" style="color: #1c6e8c;">Banco de Dados</h3>
         <p class="text-gray-700 text-base">
           A aplicação utiliza o <strong>PostgreSQL</strong> como banco de dados relacional. Para facilitar a interação com o banco de dados, é empregado o ORM <strong>Prisma</strong>, que permite criar e executar consultas complexas de forma simples e intuitiva.
         </p>
       </section>
 
       <section id="docker">
-        <h3 class="text-2xl font-semibold text-purple-800 mb-4">Infraestrutura</h3>
+        <h3 class="text-2xl font-semibold mb-4" style="color: #1c6e8c;">Infraestrutura</h3>
         <p class="text-gray-700 text-base">
           O <strong>Docker</strong> é usado para conteinerizar a aplicação, garantindo consistência entre os ambientes de desenvolvimento e produção. Isso facilita o gerenciamento do ambiente e a instalação de dependências.
         </p>
       </section>
 
       <div class="mt-12 text-center">
-        <a href="documentacao.html" class="inline-block bg-purple-800 text-white px-6 py-3 rounded-lg shadow hover:bg-purple-700 transition">
+        <a href="documentacao.html" class="inline-block text-white px-6 py-3 rounded-lg shadow hover:bg-purple-700 transition" style="background-color: #1c6e8c;">
           ← Voltar à Página Anterior
         </a>
       </div>
@@ -119,8 +115,8 @@
   </div>
 
   <!-- Rodapé -->
-  <footer class="bg-gray-900 text-white p-6 text-center text-sm flex-shrink-0">
-    <p>&copy; 2025 Metacognição em Leitura. Todos os direitos reservados.</p>
+  <footer class="p-6 text-center text-sm text-white" style="background-color: #1c6e8c;">
+    <p>&copy; 2025 Metacognição em Ação. Todos os direitos reservados.</p>
   </footer>
 
   <script>

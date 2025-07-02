@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sobre o Projeto - Metacognição em Leitura</title>
+  <title>Metacognição em Leitura</title>
 
   <link rel="icon" href="assets/stack-of-books.png" type="image/png" />
 
@@ -11,19 +11,39 @@
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans leading-relaxed min-h-screen flex flex-col">
 
-  <!-- Cabeçalho -->
-  <header class="bg-purple-900 text-white p-4 shadow-md">
+<!-- Cabeçalho -->
+  <header class="p-4 shadow-md bg-[#1c6e8c]" style="background-color: #1c6e8c;">
     <div class="container mx-auto flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold flex items-center gap-2">
+       <a href="index-metacom.html" class="text-2xl font-bold flex items-center gap-2 text-white">
         Metacognição em Ação
         <img src="assets/stack-of-books.png" alt="Ícone de livros" class="w-10 h-10" />
       </a>
+
+      <!-- Botão hambúrguer (visível apenas em telas pequenas) -->
+      <button id="menu-button" class="sm:hidden text-white focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Menu (desktop) -->
+      <nav class="hidden sm:flex space-x-8 text-lg font-semibold text-white">
+        <a href="sobre.html" class="hover:underline">Sobre o projeto</a>
+        <a href="documentacao.html" class="hover:underline">Documentação</a>
+      </nav>
+    </div>
+
+    <!-- Menu (mobile) -->
+    <div id="mobile-menu" class="sm:hidden hidden flex-col bg-[#1c6e8c] mt-4 px-4 pb-4 text-white text-lg font-semibold">
+      <a href="sobre.html" class="block py-2 border-b border-white/20">Sobre o projeto</a>
+      <a href="documentacao.html" class="block py-2">Documentação</a>
     </div>
   </header>
 
   <!-- Conteúdo principal -->
   <main class="container mx-auto px-6 py-16 flex-grow max-w-4xl">
-    <h2 class="text-3xl font-extrabold text-purple-900 mb-8 text-center">
+    <h2 class="text-3xl font-extrabold mb-8 text-center" style="color: #1c6e8c;">
       Sobre o Projeto
     </h2>
     <p class="text-lg text-justify mb-6">
@@ -33,16 +53,16 @@
       Seja você um desenvolvedor, um usuário ou apenas alguém interessado, aqui você encontrará todas as informações necessárias sobre o projeto.
     </p>
 
-    <div class="mt-12 text-center">
-      <a href="index.html" class="inline-block bg-purple-800 text-white px-6 py-3 rounded-lg shadow hover:bg-purple-700 transition">
-        ← Voltar à Página Inicial
-      </a>
-    </div>
+     <div class="mt-12 text-center">
+        <a href="documentacao.html" class="inline-block text-white px-6 py-3 rounded-lg shadow hover:bg-purple-700 transition" style="background-color: #1c6e8c;">
+          ← Voltar à Página Anterior
+        </a>
+      </div>
   </main>
 
-  <!-- Rodapé -->
-  <footer class="bg-gray-900 text-white p-6 text-center text-sm">
-    <p>&copy; 2025 Metacognição em Leitura. Todos os direitos reservados.</p>
+ <!-- Rodapé -->
+  <footer class="p-6 text-center text-sm text-white" style="background-color: #1c6e8c;">
+    <p>&copy; 2025 Metacognição em Ação. Todos os direitos reservados.</p>
   </footer>
 
 </body>
