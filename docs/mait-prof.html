@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MAIT - MetaProf</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/professor.png" type="image/png" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    body.menu-open {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
+
+  <!-- Cabeçalho -->
+  <header style="background-color: #1c6e8c;" class="text-white p-3 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index-prof.html" class="text-2xl font-extrabold flex items-center gap-3">
+        <img src="assets/professor.png" alt="Ícone de livros" class="w-8 h-8" />
+        MetaProf
+      </a>
+      <!-- Botão do menu hambúrguer (mobile only) -->
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <!-- Menu desktop -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-8 text-lg font-semibold">
+          <li><a href="sobre-prof.html" class="hover:underline">Sobre</a></li>
+          <li><a href="#" class="hover:underline">Documentação</a></li>
+          <li><a href="mait-prof.html" class="hover:underline">Questionário MAIT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sidebar (mobile menu) -->
+  <div id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-30 md:hidden">
+    <nav class="p-6 space-y-4 text-lg font-semibold text-gray-800">
+      <a href="sobre-prof.html" class="block hover:text-blue-700">Sobre</a>
+      <a href="#" class="block hover:text-blue-700">Documentação</a>
+      <a href="mait-prof.html" class="block hover:text-blue-700">Questionário MAIT</a>
+    </nav>
+  </div>
+
+  <!-- Overlay para mobile -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-20 md:hidden"></div>
+
+  <!-- Container principal -->
+  <div class="flex flex-grow container mx-auto px-4 md:px-6 py-8 max-w-3xl gap-8">
+    <!-- Conteúdo -->
+    <main class="flex-grow bg-white rounded-lg shadow p-8 overflow-auto max-h-[calc(100vh-4rem)]">
+      <h2 class="text-3xl font-extrabold mb-10 text-center" style="color: #1c6e8c;">
+        Questionário MAIT
+      </h2>
+     <section class="mb-12">
+      <h3 class="text-2xl font-semibold mb-3" style="color: #1c6e8c;">O que é o MAIT?</h3>
+      <p class="text-gray-700 text-justify leading-relaxed mb-4">
+        O <strong>MAIT</strong> (Metacognitive Awareness Inventory for Teachers) é uma ferramenta diagnóstica utilizada para avaliar o nível de consciência metacognitiva de professores em relação ao seu próprio processo de ensino e aprendizagem. Baseado em princípios da metacognição, ele permite identificar como os educadores planejam, monitoram e avaliam suas práticas pedagógicas.
+      </p>
+      <p class="text-gray-700 text-justify leading-relaxed mb-4">
+        A metacognição refere-se à capacidade de pensar sobre o próprio pensamento — ou seja, ao conhecimento e controle que um indivíduo tem sobre seus processos cognitivos. No contexto educacional, essa habilidade é essencial para promover práticas mais reflexivas, conscientes e eficazes.
+      </p>
+      <p class="text-gray-700 text-justify leading-relaxed mb-4">
+        O questionário MAIT é composto por diversas afirmações que exploram aspectos como a capacidade do professor de refletir sobre suas estratégias de ensino, ajustar abordagens com base no feedback dos alunos e desenvolver um planejamento pedagógico mais intencional e autorregulado.
+      </p>
+      <p class="text-gray-700 text-justify leading-relaxed mb-4">
+        A aplicação do MAIT permite não apenas uma autoavaliação significativa, mas também pode servir como ponto de partida para formações continuadas e desenvolvimento profissional. Com base nos resultados obtidos, os educadores podem identificar pontos fortes e áreas que precisam de aprimoramento, contribuindo para a melhoria contínua da prática docente.
+      </p>
+    </section>
+
+      <div class="mt-12 text-center">
+        <a href="documentacao-prof.html" class="text-white px-6 py-3 rounded-lg shadow transition"
+           style="background-color: #1c6e8c;"
+           onmouseover="this.style.backgroundColor='#175a6a'"
+           onmouseout="this.style.backgroundColor='#1c6e8c'">
+          ← Voltar à Página Anterior
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <!-- Rodapé -->
+  <footer style="background-color: #1c6e8c;" class="text-white py-4 text-center text-sm">
+    <p>&copy; 2025 MetaProf. Todos os direitos reservados.</p>
+  </footer>
+
+  
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+      overlay.classList.toggle('hidden');
+      document.body.classList.toggle('menu-open');
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+      document.body.classList.remove('menu-open');
+    });
+  </script>
+</body>
+</html>

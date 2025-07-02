@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sobre o MetaProf - MAIT</title>
+
+  <link rel="icon" href="assets/professor.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    body.menu-open {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
+
+  <!-- Cabeçalho -->
+  <header style="background-color: #1c6e8c;" class="text-white p-3 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index-prof.html" class="text-2xl font-extrabold flex items-center gap-3">
+        <img src="assets/professor.png" alt="Ícone" class="w-8 h-8" />
+        MetaProf
+      </a>
+      <nav>
+        <ul class="flex space-x-8 text-lg font-semibold">
+          <li><a href="sobre-prof.html" class="hover:underline">Sobre</a></li>
+          <li><a href="documentacao-prof.html" class="hover:underline">Documentação</a></li>
+          <li><a href="mait-prof.html" class="hover:underline">Questionário MAIT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="flex flex-grow container mx-auto px-4 md:px-6 py-8 max-w-6xl gap-8">
+
+    <!-- Menu lateral -->
+    <nav id="sidebar"
+      class="fixed inset-y-0 left-0 bg-white rounded-r-lg shadow p-6 w-64 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out overflow-auto
+            z-30 md:static md:flex-shrink-0 h-[calc(100vh-4rem)]"
+    >
+      <h2 class="text-xl font-semibold mb-6" style="color: #1c6e8c;">Seções</h2>
+      <ul class="space-y-4 text-gray-800 text-sm">
+        <li><a href="mait-prof.html" class="hover:text-[#1c6e8c] font-medium block">Questionário MAIT</a></li>
+        <li>
+          <span class="font-semibold text-gray-700">Funcionalidades</span>
+          <ul class="pl-4 mt-2 space-y-2 text-gray-600">
+            <li><a href="cadastro.html" class="hover:text-[#1c6e8c] block">Cadastro</a></li>
+            <li><a href="login.html" class="hover:text-[#1c6e8c] block">Login</a></li>
+            <li><a href="estudante.html" class="hover:text-[#1c6e8c] block">Estudante</a></li>
+            <li><a href="professor.html" class="hover:text-[#1c6e8c] block">Professor</a></li>
+            <li><a href="usuario.html" class="hover:text-[#1c6e8c] block">Usuário</a></li>
+          </ul>
+        </li>
+        <li><a href="banco.html" class="hover:text-[#1c6e8c] font-medium block">Banco de dados</a></li>
+      </ul>
+    </nav>
+
+    <!-- Overlay para mobile -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-20 md:hidden"></div>
+
+    <!-- Conteúdo principal -->
+    <main class="flex-grow bg-white rounded-lg shadow p-8 overflow-auto max-h-[calc(100vh-4rem)]">
+      <h2 class="text-3xl font-extrabold text-center mb-10" style="color: #1c6e8c;">
+        Sobre o Projeto
+      </h2>
+
+      <section class="mb-10">
+        <p class="text-gray-700 text-justify leading-relaxed mb-6">
+          O projeto <strong>MetaProf – Metacognição Docente em Foco</strong>, vinculado à <strong>Universidade Federal de São Paulo (Unifesp)</strong>, tem como objetivo desenvolver uma ferramenta digital interativa voltada para a <strong>avaliação e promoção da metacognição na prática pedagógica</strong>.
+        </p>
+        <p class="text-gray-700 text-justify leading-relaxed mb-6">
+          A iniciativa visa apoiar professores na reflexão sobre seus processos de <em>planejamento</em>, <em>monitoramento</em> e <em>avaliação</em>, contribuindo para o fortalecimento de estratégias cognitivas e metacognitivas no ambiente educacional.
+        </p>
+      </section>
+
+      <section class="mb-10">
+        <h3 class="text-2xl font-semibold mb-3" style="color: #1c6e8c;">Inventário MAIT</h3>
+        <p class="text-gray-700 text-justify leading-relaxed mb-6">
+          O site do MetaProf oferece acesso ao <strong>Inventário MAIT (Versão Adaptada)</strong>, uma ferramenta desenvolvida para investigar o grau de consciência metacognitiva de docentes em sua atuação profissional.
+        </p>
+      </section>
+
+      <section class="mb-10">
+        <h3 class="text-2xl font-semibold mb-3" style="color: #1c6e8c;">Para quem é o MetaProf?</h3>
+        <p class="text-gray-700 text-justify leading-relaxed mb-6">
+          Seja você <strong>professor, pesquisador, estudante de licenciatura ou desenvolvedor</strong>, aqui encontrará todas as informações essenciais sobre o projeto, sua fundamentação teórica e possibilidades de aplicação.
+        </p>
+      </section>
+
+      <div class="mt-12 text-center">
+        <a href="index-prof.html" class="text-white px-6 py-3 rounded-lg shadow transition"
+           style="background-color: #1c6e8c;"
+           onmouseover="this.style.backgroundColor='#175a6a'"
+           onmouseout="this.style.backgroundColor='#1c6e8c'">
+          ← Voltar à Página Inicial
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <!-- Rodapé -->
+  <footer style="background-color: #1c6e8c;" class="text-white py-4 text-center text-sm">
+    <p>&copy; 2025 MetaProf - Unifesp. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Script do menu -->
+  <script>
+    const overlay = document.getElementById('overlay');
+    const sidebar = document.getElementById('sidebar');
+    const body = document.body;
+
+    overlay.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+      body.classList.remove('menu-open');
+    });
+  </script>
+</body>
+</html>
